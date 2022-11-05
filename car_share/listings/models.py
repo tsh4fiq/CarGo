@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Listings(models.Model):
+class ListingsModel(models.Model):
     location=models.TextField(max_length=40)
     owner = models.TextField(max_length=40)
     car_type = models.TextField(max_length=40)
