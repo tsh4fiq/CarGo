@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Review(models.Model):
+class ReviewModel(models.Model):
     # foreign_key = # get tihs from user models
     score = models.IntegerField()
     reviewer = models.TextField()
