@@ -2,10 +2,16 @@
 /shelf/
 /workspace.xml
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bf3497e (added GCP API key to car_share/settings.py)
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bf3497e (added GCP API key to car_share/settings.py)

@@ -3,10 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Project.iml" filepath="$PROJECT_DIR$/.idea/Project.iml" />
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/CarShare_clone.iml" filepath="$PROJECT_DIR$/.idea/CarShare_clone.iml" />
 >>>>>>> origin/main
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Project.iml" filepath="$PROJECT_DIR$/.idea/Project.iml" />
+>>>>>>> bf3497e (added GCP API key to car_share/settings.py)
     </modules>
   </component>
 </project>
