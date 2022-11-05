@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.urls import reverse, reverse_lazy
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import ReviewModel
 
@@ -9,7 +11,14 @@ from .models import ReviewModel
 
 reviews_model = ReviewModel
 reviews_fields = ['title', 'description']
+reviews_success_url = reverse_lazy('reviews')
 
-class ReviewsViews(CreateView):
+class ReviewsViewsCreate(CreateView):
     model = reviews_model
     fields = reviews_fields
+    success_url = reviews_success_url
+
+class ReviewsViewsRead(DetailView):
+    model = reviews_model
+    fields = reviews_fields
+    success_url = reviews_success_url

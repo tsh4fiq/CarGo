@@ -21,13 +21,12 @@ class ListingsViewRead(DetailView):
     fields = listing_fields
     success_url = listing_success_url
 
-
-class ListingsViewsCreate(CreateView):
+class ListingsViewCreate(CreateView):
     model = listing_model
     fields = listing_fields
     success_url = listing_success_url
 
-class ListingsViewsDelete(DeleteView):
+class ListingsViewDelete(DeleteView):
     model = listing_model
     fields = listing_fields
     success_url = listing_success_url
