@@ -1,20 +1,11 @@
 from django.db import models
+from listings.models import ListingsModel
+from django.db.models import CASCADE
 
 # Create your models here.
 
+
 class Review(models.Model):
-    # foreign_key = # get tihs from user models
-    score = models.IntegerField()
-    reviewer = models.TextField()
-    reviewee = models.TextField()
-    review_text = models.TextField()
-
-
-"""Review:
-    score
-    reviewer
-    reviewee
-    text of review
-"""
-
-# TODO: add and average out sum for the number of reviews
+    score = models.IntegerField(max_length=1)
+    listing = models.ForeignKey(ListingsModel, on_delete=CASCADE, related_name="listing")
+    review_text = models.TextField(max_length=500, null=True, blank=True)

@@ -96,6 +96,10 @@ body {
     color: #9747FF;
 }
 
+.wrapper .error {
+    color: red;
+}
+
 @media(max-width: 380px) {
     .wrapper {
         margin: 30px 20px;
