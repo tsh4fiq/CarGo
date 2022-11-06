@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CarGo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/login.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="logo">
+        <img src="{% static 'accounts/logo.png' %}" alt="">
+    </div>
+    <h3>
+        <div class="text-center mt-4 name">
+            CarGo
+        </div>
+    </h3>
+    <form class="p-3 mt-3" method="POST" action="">
+        <div class="form-field d-flex align-items-center">
+            <span class="username"></span>
+            <input type="text" name="username" id="username" placeholder="Username" value="{{ request.POST.username }}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <div class="error">
+            <span id="error">
+                {{ form.errors.password }}
+            </span>
+        </div>
+        <button class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="/accounts/signup">Sign up</a>
+    </div>
+</div>
+
+</body>
+</html>

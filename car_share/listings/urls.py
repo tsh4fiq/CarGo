@@ -1,10 +1,14 @@
 from django.urls import path
-from .views import ListingsViewRead, ListingsViewDelete, ListingsViewCreate
+from django.conf.urls.static import static
+from django.conf import settings
+from listings.views.create_listing import CreateListing
+from listings.views.view_listings import ViewListings
+from listings.views.delete_listing import DeleteListing
 
-# URL files defined the path to our different web-pages (aka endpoints)
+app_name = 'listings'
 
-url_patterns = [
-    path("listings/create", ListingsViewCreate.as_view(), name="listings"), 
-    path("listings/read", ListingsViewRead.as_view(), name="listings"), 
-    path("listings/delete", ListingsViewDelete.as_view(), name="listings"), 
-    ]
+urlpatterns = [
+    path("listings/create", CreateListing.as_view(), name="create_listing"),
+    path("listings/view", ViewListings.as_view(), name="view_listings"),
+    path("listings/delete", DeleteListing.as_view(), name="delete_listing")
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

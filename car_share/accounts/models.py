@@ -3,5 +3,4 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class AccountModel(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE) 
+# ommitted due to intended usage of User model

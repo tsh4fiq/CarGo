@@ -1,9 +1,10 @@
 from django.urls import path
-from . import views as 
+from reviews.views.review_create import CreateReview
+from reviews.views.view_reviews import ViewReviews
 
-# URL files defined the path to our different web-pages (aka endpoints)
+app_name = 'reviews'
 
-url_patterns = [
-    path("reviews/create", views.ReviewsViewsCreate.as_view(), name="reviews"), 
-    path("reviews/read", views.ReviewsViewsRead.as_view(), name="reviews"), 
-    ]
+urlpatterns = [
+    path('create/', CreateReview.as_view(), name='create_review'),
+    path('view/', ViewReviews.as_view(), name='view_reviews')
+]

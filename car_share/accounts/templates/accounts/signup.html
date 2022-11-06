@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CarGo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/login.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="logo">
+        <img src="{% static 'accounts/logo.png' %}" alt="">
+    </div>
+    <h3>
+        <div class="text-center mt-4 name">
+            CarGo
+        </div>
+    </h3>
+    <form class="p-3 mt-3" method="POST">
+        <div class="form-field d-flex align-items-center">
+            <input type="text" name="first_name" id="first_name" placeholder="First Name"
+                   value="{{ request.POST.first_name }}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input type="text" name="last_name" id="last_name" placeholder="Last Name"
+                   value = "{{ request.POST.last_name }}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="username"></span>
+            <input type="username" name="username" id="username" placeholder="Username"
+                   value="{{ request.POST.username }}">
+        </div>
+        <div class="error">
+            <span>
+                {{ form.errors.username }}
+            </span>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="error">
+            <span>
+                {{ form.errors.password }}
+            </span>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="email"></span>
+            <input type="email" name="email" id="email" placeholder="Email" value="{{ request.POST.email }}">
+        </div>
+        <div class="error">
+            <span>
+                {{ form.errors.email }}
+            </span>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="date"></span>
+            <input type="text" name="date" id="date" placeholder="Date of Birth" onfocus="(this.type='date')"
+                   value="{{ request.POST.date}}">
+        </div>
+        <div class="error">
+            <span>
+                {{ form.errors.date }}
+            </span>
+        </div>
+        <button class="btn mt-3">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>
