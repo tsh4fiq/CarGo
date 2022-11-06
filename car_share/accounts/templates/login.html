@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <title>CarGo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/sign_up.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <script></script> <!---this would point to landingLogin.js-->
-    <text>"Hello"</text>
 
+<div class="wrapper">
+    <div class="logo">
+        <img src="../assets/Screen_Shot_2022-11-05_at_7.40.58_PM-modified.png" alt="">
+    </div>
+    <h3>
+        <div class="text-center mt-4 name">
+            CarGo
+        </div>
+    </h3>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="email"></span>
+            <input type="email" name="email" id="email" placeholder="email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>
 
 </body>
 </html>
